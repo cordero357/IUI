@@ -1,0 +1,54 @@
+body {
+    position: relative; /* Needed to position the pseudo-element */
+    background-image: url("../images/heart.jpg");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #f5f5f5; /* Light gray - applies to the entire body */
+}
+
+body::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Positions the overlay relative to the body */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white overlay */
+    z-index: 0; /* Ensures the overlay is behind the content */
+}
+
+/* Ensure content is above the overlay */
+body * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Background color for <h1> to make the title stand out */
+h1 {
+    background-color: #000000; /* Black */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style for paragraphs to enhance readability */
+p {
+    color: #333333; /* Dark gray text */
+    line-height: 1.6; /* Spacing between lines */
+    margin-bottom: 20px; /* Space after paragraphs */
+}
+
+/* Style for hyperlinks to make them more fitting to the theme */
+a {
+    color: #007bff; /* Bootstrap default blue - change as needed */
+    text-decoration: none; /* Removing underline from links */
+}
+
+/* Style for <h2> to differentiate from <h1> */
+h2 {
+    color: #d3d3d3; /* Light gray */
+    border-bottom: 2px solid #000000; /* Black bottom border */
+    padding-bottom: 5px;
+}
