@@ -1,0 +1,72 @@
+body {
+    background-color: #f0f8f7; /* A refreshing and light background color */
+    font-family: 'Georgia', Times, serif; /* A classic, academic font with a touch of elegance */
+    color: #2e4053; /* A deep, readable color for contrast */
+    line-height: 1.8; /* Increased line spacing for better readability */
+}
+
+.container {
+    max-width: 800px; /* A defined width for better control on larger screens */
+    margin: 30px auto; /* Increased margin for more breathing space */
+    padding: 30px; /* Increased padding for content emphasis */
+    background-color: #ffffff; /* Maintaining a white background for clarity */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15); /* A slightly stronger shadow for depth */
+    border-radius: 10px; /* Rounded corners for a modern touch */
+    overflow: hidden; /* Ensures no overflow from the pseudo-element or content */
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: -10px; /* Adjusted position for a subtle peek of the green background */
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-color: #daf5e9; /* A lighter, more vibrant green for freshness */
+    z-index: -1;
+}
+
+.bio-image {
+    width: 250px; /* A fixed width for more control over the image size */
+    height: auto;
+    border: 3px solid #a5d6a7; /* A border to complement the green theme */
+    border-radius: 5px; /* Slightly rounded edges for the image */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12); /* A subtle shadow for the image */
+}
+
+figure {
+    margin: 20px 0; /* Increased margin for better layout */
+    text-align: center; /* Center-align the figure and its content */
+}
+
+figcaption {
+    font-style: normal; /* Changing style for a modern look */
+    color: #4a6572; /* A softer color for the caption */
+    margin-top: 10px;
+}
+
+/* Responsive adjustments for a fluid experience */
+@media screen and (max-width: 1000px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        background-color: #e8f5e9; /* Adjusting back to a subtle green */
+        padding: 20px; /* Adjusting padding for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        box-shadow: none; /* Removing shadow on very small screens for flat design */
+        padding: 15px;
+    }
+    
+    .bio-image {
+        width: 100%; /* Full-width images on smaller screens */
+        margin: 10px 0; /* Adjusting margin for layout */
+    }
+}
